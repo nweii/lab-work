@@ -1,0 +1,18 @@
+{
+  "name": "lab-work",
+  "version": "0.5.0",
+  "description": "Keep a lab inside your own site: pages where you try design ideas on the real components, decide by watching them run, and keep a record of what you decided.",
+  "author": {
+    "name": "Nathan Cheng"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nweii/lab-work",
+  "repository": "https://github.com/nweii/lab-work.git",
+  "keywords": [
+    "design",
+    "lab",
+    "dialkit",
+    "skills"
+  ],
+  "displayName": "Lab Work"
+}
