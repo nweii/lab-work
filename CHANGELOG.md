@@ -4,6 +4,12 @@ All notable changes to this plugin are recorded here. The format follows [Keep a
 
 ## Unreleased
 
+### Changed
+
+- How work divides into labs is stated as the user's call.
+- The glossary defines a condition by its role in the decision.
+- A board's items are places one subject shows, or one subject under several conditions.
+
 ## 0.5.0 - 2026-11-10
 
 To bring a lab section set up with 0.4.0 up to this release: merge the updated agents-file section, name each production subject's variant `current`, and rename any all-states view to a conditions board.
