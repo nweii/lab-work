@@ -1,0 +1,83 @@
+# Design lab
+
+Agent skills for keeping a lab inside your own site. A lab is a page where you try a design idea on the site's real components, decide by watching it run, and keep a record of what you decided.
+
+Design decisions about a running product often get made in a throwaway branch or a chat with an agent, and a month later nobody can say why the radius is 12. A lab keeps the experiment beside the product. You open `/lab/footer`, switch between the footer that ships and two proposals, move sliders until the spacing is right, and tell your agent which one to ship. The agent moves the code into production and writes down what you chose.
+
+You tune and decide. The agent builds the lab, sets starting points you can change while using it, and applies what you decide.
+
+## What you do in a lab
+
+| You want to | In the lab |
+| --- | --- |
+| Tune a feel, such as a ripple that runs too fast | Move controls on the production component. The values go back to production. |
+| Redesign something that exists | Switch between the current version and proposals, in the page they ship into. |
+| Design something new | Compare a few directions, choose one, tune it, and promote it into production. |
+| Check that a design holds up | Open a board of cases: hover, focus, dark theme, a long title, phone width. |
+| Tune motion | Replay, pause, and scrub a timeline. |
+| Tune one scale across many components | Put the components on one board that shares the controls. |
+| Come back later | Read the outcome. A decided lab is frozen with captures and the commit where it still runs. |
+
+## How it fits together
+
+The skill builds a `/lab` section in your site: a sidebar that lists every lab, a shared canvas, and a script for freezing decided labs. Each lab is a folder with a page.
+
+- A lab renders in one of three canvas layouts. A stage centers one subject, a board puts several items on one grid, and a full bleed lab fills the pane.
+- [DialKit](https://github.com/joshpuckett/dialkit) by Josh Puckett is the control panel. You save versions to compare and press **Copy** to hand values to your agent.
+- When the subject already ships, the lab keeps the current version as a variant, so every proposal is judged against it.
+- Promoting a proposal moves its code into production. The lab then imports it from there.
+- Freezing a decided lab removes its code and keeps the outcome, captures of it running, and the commit to revisit.
+
+The skill also writes these conventions into your project's agents file, so later sessions can author labs without it. [GLOSSARY.md](skills/build-lab/GLOSSARY.md) defines every term.
+
+## Skills
+
+| Skill | Use it to |
+| --- | --- |
+| `build-lab` | Set up the lab section in a site, or add shared canvases or freezing to an existing one. |
+
+## What it assumes
+
+- A website or app whose routes are folders. The skill includes a scaffold for the Next.js App Router and builds from its conventions on other routers.
+- An agent that can read and edit the project, run it, and open it in a browser.
+- DialKit for controls. On a project that already uses another panel library, the skill maps its uses onto that library.
+
+## Install
+
+For Codex, run these commands in your terminal.
+
+```bash
+codex plugin marketplace add nweii/design-lab
+codex plugin add design-lab@design-lab
+```
+
+For Claude Code, run these commands in a session.
+
+```text
+/plugin marketplace add nweii/design-lab
+/plugin install design-lab@design-lab
+```
+
+To install the skill directly, use the [skills CLI](https://github.com/vercel-labs/skills).
+
+```bash
+bunx skills add nweii/design-lab -g -a claude-code codex
+```
+
+The skill does not run automatically. Start it with `/build-lab` in the project you want a lab in.
+
+## Status
+
+Early. The skill has set up and run one site's lab section. Expect its terms and steps to change as it runs on more.
+
+## Credits
+
+The lab pattern draws on DialKit by Josh Puckett, Emil Kowalski's prototype workflow, and shadcn/ui's sidebar building blocks. The cases board follows [Raphael Salaja's `lab.js`](https://github.com/raphaelsalaja/skills/tree/main/skills/lab).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+MIT. See [LICENSE](LICENSE).
