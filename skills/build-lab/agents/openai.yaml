@@ -1,0 +1,5 @@
+interface:
+  display_name: "Build Lab"
+  short_description: "Set up a lab section of design experiments in a website"
+policy:
+  allow_implicit_invocation: false
