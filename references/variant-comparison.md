@@ -9,6 +9,7 @@ Use the control panel's saved versions when every direction shares one implement
 ## Picker contract
 
 - Keep the set small: two to five named directions, each with a stated axis such as layout, density, personality, motion, or interaction.
+- When the subject exists in production, include it as a variant named `current`, so the user can compare each proposal with what ships.
 - Render one variant at full size in realistic context. Side-by-side thumbnails distort the spacing and scale being judged.
 - Switch the rendered variant instantly. The picker may animate its own active indicator, with a reduced-motion fallback, but the comparison itself stays immediate.
 - Store the selected direction in a stable named `?v=<name>` value so reloads and shared links preserve it.
