@@ -1,6 +1,6 @@
-# Design lab
+# Lab work
 
-Agent skills for keeping a lab inside your own site. A lab is a page where you try a design idea on the site's real components, decide by watching it run, and keep a record of what you decided.
+Agent skills for keeping a design lab inside your own site. A lab is a page where you try a design idea on the site's real components, decide by watching it run, and keep a record of what you decided.
 
 Design decisions about a running product often get made in a throwaway branch or a chat with an agent, and a month later nobody can say why the radius is 12. A lab keeps the experiment beside the product. You open `/lab/footer`, switch between the footer that ships and two proposals, move sliders until the spacing is right, and tell your agent which one to ship. The agent moves the code into production and writes down what you chose.
 
@@ -13,7 +13,7 @@ You tune and decide. The agent builds the lab, sets starting points you can chan
 | Tune a feel, such as a ripple that runs too fast | Move controls on the production component. The values go back to production. |
 | Redesign something that exists | Switch between the current version and proposals, in the page they ship into. |
 | Design something new | Compare a few directions, choose one, tune it, and promote it into production. |
-| Check that a design holds up | Open a board of cases: hover, focus, dark theme, a long title, phone width. |
+| Check that a design holds up | Open a board that shows it under each condition: hover, focus, dark theme, a long title, phone width. |
 | Tune motion | Replay, pause, and scrub a timeline. |
 | Tune one scale across many components | Put the components on one board that shares the controls. |
 | Come back later | Read the outcome. A decided lab is frozen with captures and the commit where it still runs. |
@@ -47,21 +47,21 @@ The skill also writes these conventions into your project's agents file, so late
 For Codex, run these commands in your terminal.
 
 ```bash
-codex plugin marketplace add nweii/design-lab
-codex plugin add design-lab@design-lab
+codex plugin marketplace add nweii/lab-work
+codex plugin add lab-work@lab-work
 ```
 
 For Claude Code, run these commands in a session.
 
 ```text
-/plugin marketplace add nweii/design-lab
-/plugin install design-lab@design-lab
+/plugin marketplace add nweii/lab-work
+/plugin install lab-work@lab-work
 ```
 
 To install the skill directly, use the [skills CLI](https://github.com/vercel-labs/skills).
 
 ```bash
-bunx skills add nweii/design-lab -g -a claude-code codex
+bunx skills add nweii/lab-work -g -a claude-code codex
 ```
 
 The skill does not run automatically. Start it with `/build-lab` in the project you want a lab in.
@@ -72,7 +72,7 @@ Early. The skill has set up and run one site's lab section. Expect its terms and
 
 ## Credits
 
-The lab pattern draws on DialKit by Josh Puckett, Emil Kowalski's prototype workflow, and shadcn/ui's sidebar building blocks. The cases board follows [Raphael Salaja's `lab.js`](https://github.com/raphaelsalaja/skills/tree/main/skills/lab).
+The lab pattern draws on DialKit by Josh Puckett, Emil Kowalski's prototype workflow, and shadcn/ui's sidebar building blocks. The conditions board follows [Raphael Salaja's `lab.js`](https://github.com/raphaelsalaja/skills/tree/main/skills/lab).
 
 ## Contributing
 

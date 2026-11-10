@@ -1,14 +1,14 @@
 {
-  "name": "design-lab",
+  "name": "lab-work",
   "owner": {
     "name": "Nathan Cheng"
   },
   "metadata": {
-    "description": "Design lab skills."
+    "description": "Lab work skills."
   },
   "plugins": [
     {
-      "name": "design-lab",
+      "name": "lab-work",
       "version": "0.5.0",
       "description": "Keep a lab inside your own site: pages where you try design ideas on the real components, decide by watching them run, and keep a record of what you decided.",
       "author": {

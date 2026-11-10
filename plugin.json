@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "design-lab",
+  "name": "lab-work",
   "version": "0.5.0",
   "description": "Keep a lab inside your own site: pages where you try design ideas on the real components, decide by watching them run, and keep a record of what you decided.",
   "author": {
     "name": "Nathan Cheng"
   },
   "license": "MIT",
-  "homepage": "https://github.com/nweii/design-lab",
-  "repository": "https://github.com/nweii/design-lab.git",
+  "homepage": "https://github.com/nweii/lab-work",
+  "repository": "https://github.com/nweii/lab-work.git",
   "keywords": [
     "design",
     "lab",
@@ -20,8 +20,8 @@
       "interface": {
         "developerName": "Nathan Cheng",
         "category": "Productivity",
-        "websiteURL": "https://github.com/nweii/design-lab",
-        "displayName": "Design Lab",
+        "websiteURL": "https://github.com/nweii/lab-work",
+        "displayName": "Lab Work",
         "shortDescription": "Keep a lab of design experiments inside your site",
         "longDescription": "Keep a lab inside your own site: pages where you try design ideas on the real components, decide by watching them run, and keep a record of what you decided.",
         "capabilities": [

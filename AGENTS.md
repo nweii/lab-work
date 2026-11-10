@@ -1,4 +1,4 @@
-# Design lab
+# Lab work
 
 This repository is an agent plugin. Its skill sets up and maintains a lab section in a website: pages where the user decides something about a subject by watching it run and changing it.
 

@@ -6,7 +6,7 @@ All notable changes to this plugin are recorded here. The format follows [Keep a
 
 ## 0.5.0 - 2026-11-10
 
-To bring a lab section set up with 0.4.0 up to this release: merge the updated agents-file section, name each production subject's variant `current`, and rename any all-states view to a cases board.
+To bring a lab section set up with 0.4.0 up to this release: merge the updated agents-file section, name each production subject's variant `current`, and rename any all-states view to a conditions board.
 
 ### Added
 
@@ -17,9 +17,9 @@ To bring a lab section set up with 0.4.0 up to this release: merge the updated a
 ### Changed
 
 - Current and proposed variants replace tuning and exploring labs.
-- The all-states view is a cases board: a stage lab switches to a board of its subject's cases, which cover themes, content extremes, and widths as well as interaction states.
+- The all-states view is a conditions board: a stage lab switches to a board that shows its subject under several conditions, which cover themes, content extremes, and widths as well as interaction states.
 - Judging a variant in its destination comes before the decision. Promotion ends by confirming the destination shows what the lab showed.
-- "State" means live or frozen. A component's hover or disabled state is a case.
+- "State" means live or frozen. A component's hover or disabled state is a condition.
 
 ## 0.4.0 - 2026-11-10
 
