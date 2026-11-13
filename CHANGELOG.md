@@ -4,8 +4,16 @@ All notable changes to this plugin are recorded here. The format follows [Keep a
 
 ## Unreleased
 
+To bring a lab section set up with 0.5.0 up to this release: replace the Labs section of the project's agents file with the shorter template, keeping the host's own facts.
+
+### Added
+
+- A `lab-work` skill for working in a lab: adding one, wiring controls, applying a decision, promoting, and freezing. An agent loads it when the user asks for a lab.
+
 ### Changed
 
+- `build-lab` covers setup only. The conventions, the glossary, and the references for controls, canvases, variants, hosting, promotion, and freezing moved to `lab-work`.
+- The section setup writes into a host's agents file holds the host's own facts and a short fallback. It no longer restates the conventions.
 - How work divides into labs is stated as the user's call.
 - The glossary defines a condition by its role in the decision.
 - A board's items are places one subject shows, or one subject under several conditions.

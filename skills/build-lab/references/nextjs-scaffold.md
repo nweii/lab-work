@@ -81,7 +81,7 @@ Keep exactly **one** sort implementation. The registry preserves input order; wh
 
 Test exactly this module's external behavior: slug fallback, input-order preservation, metadata passthrough, no `undefined` keys. Also give the loader a small contract test against the real lab folder (every entry's folder has a page, every `modified` parses). Nothing else in the shell needs tests.
 
-Add `frozenOn?: string` to `LabEntry` and `LabNavItem`, a `FrozenRecord` type matching the record in [freezing.md](freezing.md), and a `parseFrozenRecord(raw, where)` that validates it with errors naming the file and field. Test the parser's acceptance and each named error.
+Add `frozenOn?: string` to `LabEntry` and `LabNavItem`, a `FrozenRecord` type matching the record in [freezing.md](../../lab-work/references/freezing.md), and a `parseFrozenRecord(raw, where)` that validates it with errors naming the file and field. Test the parser's acceptance and each named error.
 
 ## The loader
 

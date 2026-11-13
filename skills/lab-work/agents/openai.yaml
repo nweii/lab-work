@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lab Work"
+  short_description: "Add a lab, tune it, apply its decision, or freeze it"
+policy:
+  allow_implicit_invocation: true

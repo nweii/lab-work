@@ -2,7 +2,7 @@
 
 Read this when a lab will hold something other than a tuning panel: a state machine, a model of a flow, a round of variants, a prototype, or any artifact another skill or tool produces. Read it too when the project or the session brings a skill that produces such an artifact.
 
-The lab section stays the same whatever a lab holds. This skill owns the parts every lab shares: the folder, the page and its metadata, the sidebar, exposure, and the freeze lifecycle. The skill or tool that produces the artifact owns the artifact: its procedure, its vocabulary, its rules for what makes it correct, and its definition of done. Follow that skill for the work itself, and use this reference only to fit the result into a lab.
+The lab section stays the same whatever a lab holds. The lab conventions own the parts every lab shares: the folder, the page and its metadata, the sidebar, exposure, and the freeze lifecycle. The skill or tool that produces the artifact owns the artifact: its procedure, its vocabulary, its rules for what makes it correct, and its definition of done. Follow that skill for the work itself, and use this reference only to fit the result into a lab.
 
 ## The adapter
 
@@ -29,4 +29,4 @@ Some guidance for filling it in:
 
 ## What stays with the host
 
-Rules about which kinds of work belong in the lab section, and what each kind must state, are the project's editorial choice. Record them in the host's agents file next to the lab conventions. The adapter makes such rules checkable, because every lab answers the same four questions. This skill doesn't define the kinds themselves.
+Rules about which kinds of work belong in the lab section, and what each kind must state, are the project's editorial choice. Record them in the host's agents file next to the lab conventions. The adapter makes such rules checkable, because every lab answers the same four questions. The lab conventions don't define the kinds themselves.

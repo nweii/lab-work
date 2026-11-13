@@ -8,11 +8,11 @@ Start from a situation someone is in. "I was redesigning a footer and could not 
 
 A change to the skill's text should follow these rules:
 
-- **Use the glossary.** [GLOSSARY.md](skills/build-lab/GLOSSARY.md) gives each term one meaning. If a change needs a new term or shifts an old one, edit the glossary in the same pull request.
+- **Use the glossary.** [GLOSSARY.md](skills/lab-work/GLOSSARY.md) gives each term one meaning. If a change needs a new term or shifts an old one, edit the glossary in the same pull request.
 - **Give a reason and an example.** The skill relies on the agent's judgment. A rule with its reason and a "for instance" holds up better than a list of every case.
 - **Leave the user's choices to the user.** Where the panel sits and whether it remembers values are choices the user makes while using a lab. The skill sets starting points.
 - **Use what the control panel has.** Add a lab feature only where DialKit has none.
-- **Keep the two statements in step.** `SKILL.md` states the conventions, and `references/agents-md-section.md` restates them for the host project. Change both.
+- **State a convention once.** `skills/lab-work/SKILL.md` states the conventions. The section `build-lab` writes into a host's agents file holds that host's own facts, so keep conventions out of it.
 - **Write plainly.** Use sentence case headings, active voice, and whole sentences. Leave out em dashes and figures of speech.
 
 ## Before opening a pull request
@@ -21,4 +21,4 @@ A change to the skill's text should follow these rules:
 - Check that every relative link points at a file and heading that exist.
 - If you ran the changed skill on a site, say so and say what you saw. If you did not, say that.
 
-Version numbers are bumped at release, in every manifest and in the skill's `metadata.version` together.
+Version numbers are bumped at release, in every manifest and in each skill's `metadata.version` together.

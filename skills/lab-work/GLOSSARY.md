@@ -1,6 +1,6 @@
 # Glossary
 
-The terms this skill and a host's lab section use. Each has one meaning.
+The terms these skills and a host's lab section use. Each has one meaning.
 
 - **Lab**: a page in a website where the user decides something about a subject by watching it run and changing it.
 - **Lab section**: the part of the site that holds the labs, with the shell and sidebar around them.

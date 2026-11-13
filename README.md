@@ -20,7 +20,7 @@ You tune and decide. The agent builds the lab, sets starting points you can chan
 
 ## How it fits together
 
-The skill builds a `/lab` section in your site: a sidebar that lists every lab, a shared canvas, and a script for freezing decided labs. Each lab is a folder with a page.
+The `build-lab` skill builds a `/lab` section in your site: a sidebar that lists every lab, a shared canvas, and a script for freezing decided labs. Each lab is a folder with a page.
 
 - A lab renders in one of three canvas layouts. A stage centers one subject, a board puts several items on one grid, and a full bleed lab fills the pane.
 - [DialKit](https://github.com/joshpuckett/dialkit) by Josh Puckett is the control panel. You save versions to compare and press **Copy** to hand values to your agent.
@@ -28,13 +28,14 @@ The skill builds a `/lab` section in your site: a sidebar that lists every lab, 
 - Promoting a proposal moves its code into production. The lab then imports it from there.
 - Freezing a decided lab removes its code and keeps the outcome, captures of it running, and the commit to revisit.
 
-The skill also writes these conventions into your project's agents file, so later sessions can author labs without it. [GLOSSARY.md](skills/build-lab/GLOSSARY.md) defines every term.
+Setup also records your site's own facts in the project's agents file, such as where labs live and which control panel they use. The `lab-work` skill holds the conventions, so they update with the plugin and your agents file stays short. [GLOSSARY.md](skills/lab-work/GLOSSARY.md) defines every term.
 
 ## Skills
 
 | Skill | Use it to |
 | --- | --- |
-| `build-lab` | Set up the lab section in a site, or add shared canvases or freezing to an existing one. |
+| `build-lab` | Set up the lab section in a site, or add shared canvases or freezing to an existing one. You start it. |
+| `lab-work` | Add a lab, wire its controls, apply a decision, promote a variant, or freeze a decided lab. Your agent loads it when you ask for a lab. |
 
 ## What it assumes
 
@@ -64,7 +65,7 @@ To install the skill directly, use the [skills CLI](https://github.com/vercel-la
 bunx skills add nweii/lab-work -g -a claude-code codex
 ```
 
-The skill does not run automatically. Start it with `/build-lab` in the project you want a lab in.
+Start with `/build-lab` in the project you want a lab in. It does not run automatically. After setup, ask your agent for a lab and it loads `lab-work`.
 
 ## Status
 
