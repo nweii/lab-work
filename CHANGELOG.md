@@ -17,6 +17,7 @@ To bring a lab section set up with 0.5.0 up to this release: replace the Labs se
 - How work divides into labs is stated as the user's call.
 - The glossary defines a condition by its role in the decision.
 - A board's items are places one subject shows, or one subject under several conditions.
+- Panels persist values and saved versions, and follow production: a host wraps the panel hook once so that when production's defaults change, the base version moves to them, saved versions stay, and values that match neither the old nor the new defaults are kept as a saved version. This replaces leaving `persist` off.
 
 ## 0.5.0 - 2026-11-10
 
