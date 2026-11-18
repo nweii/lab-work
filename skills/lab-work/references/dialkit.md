@@ -34,9 +34,11 @@ Use a DialKit feature where one covers the need, so the user works the same pane
 - Define each panel's config from the defaults the production module exports.
 - Order controls in the sequence someone tunes the result, and start secondary folders collapsed.
 - Float the panel on a stage or full bleed lab. Mount it inline in a docked container beside a board.
-- Leave `persist` off, so a lab opens on production's values. Turn it on when the user wants a lab to reopen where they left it.
+- Persist every panel under a stable `id`, so values and saved versions survive between sessions. The user's work then branches from production's values the way a git branch does, and accepting values commits them.
+- Make persisted panels follow production. DialKit restores saved values over the config's defaults, so once production's defaults change, a persisted lab still opens on the old values. Wrap the panel hook once for the host so every lab gets the same behavior: record the defaults the panel last saw, and when they change, move the base version to the new defaults and keep saved versions. Keep values that match neither the old nor the new defaults as a saved version, so values the user never accepted survive. Values the user just shipped match the new defaults and leave nothing behind.
 
 ## Failures that show no error
 
+- **A persisted panel hides production changes.** Without the wrapper above, a lab reopens on saved values after production moves, and reloading it to confirm accepted values shows storage instead of production.
 - **Framework adapters hide the panel in production builds.** A lab served from the deployed site then has no controls. Set `productionEnabled` on the root for the lab section.
 - **A subject bound to a timeline's sampled values depends on DialKit.** Write the subject's production animation code before promoting it ([promotion.md](promotion.md)).

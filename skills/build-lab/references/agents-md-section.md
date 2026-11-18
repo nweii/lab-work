@@ -18,7 +18,7 @@ Without the skill: a folder with a `[page.tsx]` is a lab and appears in the side
 - **Files**: `[page.tsx]` (thin server wrapper), `[lab.tsx]` (client component with the controls), and an optional `[meta.ts]` that default-exports a `[LabMeta]` from `[lib/lab-registry.ts]`.
 - **Shell**: `[app/lab/layout.tsx]`, `[LabNav.tsx]`, `[entries.ts]`, `[app/lab/[slug]/]`. The registry (`[lib/lab-registry.ts]`) is a pure, tested module, so keep its tests passing.
 - **Canvas**: `[the canvas module]`, with the layouts `[stage, board, full bleed]`. [How this host forces conditions and holds pseudo-classes on a conditions board.]
-- **Control panel**: `[DialKit <version>, or the project's own control-panel library]`.
+- **Control panel**: `[DialKit <version>, or the project's own control-panel library]`. Create panels through `[the host's panel hook]`, which persists values and saved versions and follows production when its defaults change.
 - **Taste**: `[this project's design docs and tokens]`, then the user's own taste where those are silent.
 - **Exposure**: [public direct-access, protected by the host's existing mechanism, or another deliberate posture], applied once at `[the lab section boundary]`. The section is `[noindex and omitted from the sitemap and main navigation / intentionally discoverable]`. [The command that verifies protection.]
 - **Lifecycle**: `[bun run lab]` (`[scripts/lab.ts]`) runs `status`, `freeze`, `snapshot`, `visit`, and `thaw`. It never commits; review its diff and commit it.
