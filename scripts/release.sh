@@ -39,7 +39,8 @@ if [ "${1:-}" = "--check" ]; then
   exit 0
 fi
 
-if gh release view "$tag" >/dev/null 2>&1; then
+released=$(gh release list --limit 1000 --json tagName --jq '.[].tagName')
+if grep -qx "$tag" <<<"$released"; then
   echo "release: $tag is already released"
   exit 0
 fi
