@@ -3,7 +3,7 @@ name: lab-work
 description: "Work in a site's /lab section: add a lab, wire its controls, compare variants, check a subject under conditions, apply a decision, promote a variant, or freeze a decided lab. Use when the user asks for a lab or works on one."
 metadata:
   author: nweii
-  version: "0.5.0"
+  version: "0.6.0"
   credit: "Lab-building patterns draw on DialKit by Josh Puckett, Emil Kowalski's prototype workflow, and shadcn/ui's sidebar building blocks."
 ---
 

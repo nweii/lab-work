@@ -4,6 +4,8 @@ All notable changes to this plugin are recorded here. The format follows [Keep a
 
 ## Unreleased
 
+## 0.6.0 - 2026-11-18
+
 To bring a lab section set up with 0.5.0 up to this release: replace the Labs section of the project's agents file with the shorter template, keeping the host's own facts.
 
 ### Added

@@ -25,9 +25,16 @@ This repository is an agent plugin. Its skills set up a lab section in a website
 
 ## Releasing
 
-Bump the version in every manifest (`plugin.json`, `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `.codex-plugin/plugin.json`) and in each skill's `metadata.version` together. Move the `Unreleased` entries in `CHANGELOG.md` under the new version and date, and tag the release as `v<version>`.
+Record each change under `Unreleased` in `CHANGELOG.md` in the commit that makes it.
 
-Record each change under `Unreleased` in the commit that makes it.
+To release, make one commit that does both of these:
+
+- Bump the version in every manifest (`plugin.json`, `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `.codex-plugin/plugin.json`) and in each skill's `metadata.version` together.
+- Move the `Unreleased` entries in `CHANGELOG.md` under a `## <version> - <date>` heading.
+
+Run `scripts/release.sh --check` before pushing. It fails when the versions disagree or the changelog has no section for the version, and prints the release notes otherwise.
+
+Pushing that commit to `main` is the release. The Release workflow creates the tag `v<version>` and a GitHub release whose notes are that changelog section. Never create the tag by hand. Give a breaking change a line at the top of its changelog section that says how to move an existing lab section across.
 
 ## Validating
 

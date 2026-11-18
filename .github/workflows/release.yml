@@ -1,0 +1,24 @@
+# Publishes a GitHub release, and its tag, when a push to main carries a version that has none.
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      # Plain git keeps this workflow free of third-party actions.
+      - name: Fetch the pushed commit
+        run: |
+          git init -q .
+          git fetch -q --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$GITHUB_SHA"
+          git checkout -q FETCH_HEAD
+      - name: Release the version when it has no release
+        run: scripts/release.sh

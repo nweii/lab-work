@@ -21,4 +21,4 @@ A change to the skill's text should follow these rules:
 - Check that every relative link points at a file and heading that exist.
 - If you ran the changed skill on a site, say so and say what you saw. If you did not, say that.
 
-Version numbers are bumped at release, in every manifest and in each skill's `metadata.version` together.
+Leave version numbers alone. A maintainer bumps them at release, and the release publishes from `main`.
